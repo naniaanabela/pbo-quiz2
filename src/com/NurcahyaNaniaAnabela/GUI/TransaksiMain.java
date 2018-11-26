@@ -5,12 +5,18 @@
  */
 package com.NurcahyaNaniaAnabela.GUI;
 
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author NurcahyaNaniaA
  */
 public class TransaksiMain extends javax.swing.JFrame {
-
+    private int id = 0; // variable id untuk transaksi kode 
+    private String code; //variabel kode untuk kode transaksi
+    private DefaultComboBoxModel cbModel; //JCombobox model
+    private DefaultTableModel tbModel; //JTable model
     /**
      * Creates new form TransaksiMain
      */
@@ -27,8 +33,8 @@ public class TransaksiMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        code = new javax.swing.JLabel();
-        items = new javax.swing.JLabel();
+        codeLabel = new javax.swing.JLabel();
+        itemsLabel = new javax.swing.JLabel();
         codeText = new javax.swing.JTextField();
         itemsComboBox = new javax.swing.JComboBox<>();
         jumlahText = new javax.swing.JTextField();
@@ -42,9 +48,9 @@ public class TransaksiMain extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        code.setText("Code");
+        codeLabel.setText("Code");
 
-        items.setText("Items");
+        itemsLabel.setText("Items");
 
         codeText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,11 +115,11 @@ public class TransaksiMain extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(code)
+                        .addComponent(codeLabel)
                         .addGap(18, 18, 18)
                         .addComponent(codeText))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(items)
+                        .addComponent(itemsLabel)
                         .addGap(18, 18, 18)
                         .addComponent(itemsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -138,13 +144,13 @@ public class TransaksiMain extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(code)
+                    .addComponent(codeLabel)
                     .addComponent(codeText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(newButton))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(items)
+                        .addComponent(itemsLabel)
                         .addComponent(itemsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jumlahText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -217,10 +223,10 @@ public class TransaksiMain extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addButon;
     private javax.swing.JButton cancelButton;
-    private javax.swing.JLabel code;
+    private javax.swing.JLabel codeLabel;
     private javax.swing.JTextField codeText;
-    private javax.swing.JLabel items;
     private javax.swing.JComboBox<String> itemsComboBox;
+    private javax.swing.JLabel itemsLabel;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jumlahText;
     private javax.swing.JButton newButton;

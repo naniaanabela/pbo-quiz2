@@ -27,12 +27,12 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="code" min="-2" max="-2" attributes="0"/>
+                      <Component id="codeLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="codeText" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="items" min="-2" max="-2" attributes="0"/>
+                      <Component id="itemsLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="itemsComboBox" min="-2" pref="165" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -65,14 +65,14 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="code" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="codeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="codeText" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="newButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="items" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="itemsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="itemsComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
@@ -96,12 +96,12 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="code">
+    <Component class="javax.swing.JLabel" name="codeLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Code"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="items">
+    <Component class="javax.swing.JLabel" name="itemsLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Items"/>
       </Properties>
