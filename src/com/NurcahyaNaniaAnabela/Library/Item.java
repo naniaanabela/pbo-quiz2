@@ -14,7 +14,14 @@ public class Item {
     private float harga; // variable harga untuk menyimpan item harga
     private int jumlah; // jumlah untuk menyimpan item jumlah
 
+    //konstruktor class Item
+    public Item() {
+    }
 
-    
-    
+    public Item(String nama, float harga, int jumlah) {
+        this.nama = nama;
+        this.harga = harga;
+        this.jumlah = jumlah;
+    }
+       
 }
