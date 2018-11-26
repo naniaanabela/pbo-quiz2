@@ -53,4 +53,9 @@ public class Item {
     public void setJumlah(int jumlah) {
         this.jumlah = jumlah;
     }
+    
+    // menghitung hasil dari perkalian harga item dan jumlah
+    public float getTotal(){
+        return this.harga * this.jumlah;
+    }
 }
