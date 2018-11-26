@@ -23,5 +23,34 @@ public class Item {
         this.harga = harga;
         this.jumlah = jumlah;
     }
-       
+    
+        //getter nama
+    public String getNama() {
+        return nama;
+    }
+
+    //setter nama
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    //getter harga
+    public float getHarga() {
+        return harga;
+    }
+
+    //setter harga
+    public void setHarga(float harga) {
+        this.harga = harga;
+    }
+
+    //getter jumlah
+    public int getJumlah() {
+        return jumlah;
+    }
+
+    //setter jumlah
+    public void setJumlah(int jumlah) {
+        this.jumlah = jumlah;
+    }
 }
