@@ -58,4 +58,8 @@ public class Item {
     public float getTotal(){
         return this.harga * this.jumlah;
     }
+    
+    public String toString(){
+        return this.nama;
+    }
 }
