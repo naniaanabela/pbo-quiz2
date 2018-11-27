@@ -22,6 +22,7 @@ public class TransaksiCombo {
         this.items.put("Susu", new Float(20000));
     }
     
+    //method untuk menambahkan nama item
     public ArrayList<String> getNama(){
         ArrayList<String> string = new ArrayList<>();
         for(String item : this.items.keySet()){
@@ -30,11 +31,17 @@ public class TransaksiCombo {
         return string;
     }
     
+    //method untuk menambahkan harga item
     public ArrayList<Float> getHarga(){
         ArrayList<Float> flt = new ArrayList<>();
         for(float item : this.items.values()){
             flt.add(item);
         }
         return flt;
+    }
+    
+    //untuk mengambil nama dan harga item
+    public void addItem(String nama, float harga){
+        this.items.put(nama, harga);
     }
 }
