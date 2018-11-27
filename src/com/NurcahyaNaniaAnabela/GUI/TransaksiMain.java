@@ -5,6 +5,10 @@
  */
 package com.NurcahyaNaniaAnabela.GUI;
 
+import com.NurcahyaNaniaAnabela.Library.Item;
+import com.NurcahyaNaniaAnabela.Library.TransaksiCombo;
+import com.NurcahyaNaniaAnabela.Library.TransaksiTabel;
+import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 
@@ -17,10 +21,15 @@ public class TransaksiMain extends javax.swing.JFrame {
     private String code; //variabel kode untuk kode transaksi
     private DefaultComboBoxModel cbModel; //JCombobox model
     private DefaultTableModel tbModel; //JTable model
+    private ArrayList<Item> keranjang = new ArrayList<>(); //variable keranjang untuk menyimpan item transaksi
     /**
      * Creates new form TransaksiMain
      */
     public TransaksiMain() {
+        TransaksiCombo comboModel = new TransaksiCombo();
+        this.cbModel = new DefaultComboBoxModel<>(comboModel.getNama().toArray()); //Mengeset item combo
+        TransaksiTabel tableModel = new TransaksiTabel();
+        this.tbModel = new DefaultTableModel(tableModel.getKolomNama(), 0); //mengeset kolom tabel nama
         initComponents();
     }
 
