@@ -84,6 +84,23 @@ public class TransaksiMain extends javax.swing.JFrame {
         }
     }
     
+    // method untuk melakukan pengecekan jika terdapat item yang double
+    private boolean isDuplicate (String nama) {
+        boolean result = false ;
+        ArrayList <String> item = new ArrayList<>() ;
+        for (int i = 0; i < tbModel.getRowCount(); i++) {
+            item.add (tbModel.getValueAt(i, 0).toString()) ;
+        }
+        for (String i : item) {
+            if (i.equals(nama)) {
+                result = true ;
+            }
+        }
+        
+        return result ;
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
