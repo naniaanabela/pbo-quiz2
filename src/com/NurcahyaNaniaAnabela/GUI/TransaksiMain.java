@@ -70,6 +70,20 @@ public class TransaksiMain extends javax.swing.JFrame {
         return obj ;
     }
     
+    //method untuk melakukan update pada jumlah
+    private void updateJumlah (String nama , int add) {
+        ArrayList<String> item = new ArrayList<> () ;
+        for (int i = 0; i < tbModel.getRowCount(); i++) {
+            item.add (tbModel.getValueAt (i , 0).toString()) ;
+        }
+        for (int i = 0; i < item.size(); i++) {
+            if (item.get(i).equals(nama)) {
+                int jumlah = new Integer (tbModel.getValueAt (i , 2).toString()) ;
+                tbModel.setValueAt (jumlah+add , i , 2) ;
+            }
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
