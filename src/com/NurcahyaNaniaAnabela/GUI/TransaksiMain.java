@@ -273,7 +273,18 @@ public class TransaksiMain extends javax.swing.JFrame {
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
-
+        //untuk mendapatkan item yang telah dipilih 
+        String nama = this.itemsComboBox.getSelectedItem().toString() ;
+        //mengatur jumlahItem bertipe data integer
+        int jumlah = new Integer (this.jumlahItem.getText()) ;
+        //untuk melakukan pengecekan apakah ada item yang double
+        if (isDuplicate(nama)) {
+            updateJumlah (nama , jumlah) ;
+        } else {
+            tbModel.addRow(addItem(nama , jumlah));
+        }
+        this.keranjang () ;
+        
     }//GEN-LAST:event_addButtonActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
