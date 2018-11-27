@@ -20,7 +20,6 @@ public class TransaksiTabel {
     }
     
     //getter kolomNama
-
     public String[] getKolomNama() {
         return this.kolom;
     }
