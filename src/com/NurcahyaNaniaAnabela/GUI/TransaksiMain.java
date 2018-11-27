@@ -314,7 +314,25 @@ public class TransaksiMain extends javax.swing.JFrame {
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         // TODO add your handling code here:
-        
+        try {
+            //untuk melakukan looping setiap tabel
+            for (int i = 0; i < tbModel.getRowCount(); i++) {
+                // menyimpan nama dan jumlah menjadi variable
+                String nama = tbModel.getValueAt (i , 0).toString () ;
+                float harga = new Float (tbModel.getValueAt(i , 1).toString()) ;
+                int jumlah = new Integer (tbModel.getValueAt (i , 2).toString()) ;
+                this.keranjang.add (new Item(nama , harga , jumlah)) ;   
+            }
+            //menginstansiasi kelas Transaksi dengan kode dan memanggil keranjang
+            Transaksi transaksi = new Transaksi (this.code , this.keranjang) ;
+            StringBuilder sbr = new StringBuilder() ;//Stringbuilder untuk menangani output Transaksi
+            sbr.append(transaksi.printDetail()) ; //untuk menambahkan hasil transaksi
+            // memanggil dialog dengan StringBuilder
+            JOptionPane.showMessageDialog(this , sbr , "Transaksi" , JOptionPane.INFORMATION_MESSAGE) ;
+            newTransaksi () ; //dilakukan untuk melakukan transaksi baru
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }//GEN-LAST:event_saveButtonActionPerformed
 
     private void jumlahItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jumlahItemActionPerformed
