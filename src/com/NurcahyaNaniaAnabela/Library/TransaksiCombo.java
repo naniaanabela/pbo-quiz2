@@ -29,4 +29,12 @@ public class TransaksiCombo {
         }
         return string;
     }
+    
+    public ArrayList<Float> getHarga(){
+        ArrayList<Float> flt = new ArrayList<>();
+        for(float item : this.items.values()){
+            flt.add(item);
+        }
+        return flt;
+    }
 }
