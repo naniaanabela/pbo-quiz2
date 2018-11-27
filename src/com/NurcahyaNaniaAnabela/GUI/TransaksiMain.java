@@ -116,6 +116,23 @@ public class TransaksiMain extends javax.swing.JFrame {
         }
     }
     
+    //method untuk melakukan transaksi baru setelah terdapat transaksi sebelumnya.
+    private void newTransaksi () {
+        this.jumlahItem.setText(" ") ;
+        this.codeText.setText(" ") ;
+        this.newButton.setEnabled(true) ;
+        this.saveButton.setEnabled(false) ;
+        this.cancelButton.setEnabled(false) ;
+        this.addButton.setEnabled(false) ;
+        this.removeButton.setEnabled(false) ;
+        this.removeButton.setEnabled(false) ;
+        this.jumlahItem.setEnabled(false) ;
+        this.itemsComboBox.setEnabled(false) ;
+        this.tbModel.setRowCount(0) ;
+        this.keranjang.clear() ;
+    }
+    //sampai sini
+    
     
     /**
      * This method is called from within the constructor to initialize the form.
