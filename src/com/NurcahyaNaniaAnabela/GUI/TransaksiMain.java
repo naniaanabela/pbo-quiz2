@@ -307,7 +307,19 @@ public class TransaksiMain extends javax.swing.JFrame {
 
     private void removeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonActionPerformed
         // TODO add your handling code here:
-        
+        //melakukan pengecekan untuk mencari apakah ada baris yang dipilih
+        if (transaksiTable.getSelectedRow() <0) {
+            String sbr = "Pilih item yang akan dihapus" ; // jika tidak ada , maka akan muncul peringatan seperti ini
+            JOptionPane.showMessageDialog(this , sbr , "Information" , JOptionPane.INFORMATION_MESSAGE) ;  
+        } else {
+            // jika ada baris yg dipilih , maka baris tersebut akan dihapus
+            int count = transaksiTable.getSelectedRows().length ;
+            for (int i = 0; i < count; i++) {
+                tbModel.removeRow(transaksiTable.getSelectedRow()) ;
+            }
+            
+        }
+        this.keranjang() ;
     }//GEN-LAST:event_removeButtonActionPerformed
 
     /**
