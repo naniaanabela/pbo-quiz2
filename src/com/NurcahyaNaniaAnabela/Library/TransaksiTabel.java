@@ -10,5 +10,13 @@ package com.NurcahyaNaniaAnabela.Library;
  * @author NurcahyaNaniaA
  */
 public class TransaksiTabel {
-    private String[] kolom; //Variable Array bertipe string untuk menyimpan kolom nama 
+    private String[] kolom; //Variable Array bertipe string untuk menyimpan kolom nama
+    
+    //Konstruktor
+    public TransaksiTabel() {
+        this.kolom = new String[]{
+            "Nama" , "Harga", "Jumlah"
+        };
+    }
+    
 }
