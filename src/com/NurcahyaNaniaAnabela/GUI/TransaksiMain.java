@@ -105,6 +105,17 @@ public class TransaksiMain extends javax.swing.JFrame {
         return this.transaksiTable.getModel().getRowCount() <= 0 ;
     }
     
+    //untuk mematikan tombol remove dan save jika tidak digunakan
+    private void keranjang() {
+        if (isEmpty()) {
+            this.saveButton.setEnabled(false) ;
+            this.removeButton.setEnabled(false) ;
+        } else {
+            this.saveButton.setEnabled(true) ;
+            this.removeButton.setEnabled(true) ;
+        }
+    }
+    
     
     /**
      * This method is called from within the constructor to initialize the form.
