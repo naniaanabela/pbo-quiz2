@@ -262,7 +262,13 @@ public class TransaksiMain extends javax.swing.JFrame {
 
     private void newButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newButtonActionPerformed
         // TODO add your handling code here:
-
+        this.jumlahItem.setText ("1") ;
+        this.newButton.setEnabled (false) ;
+        this.cancelButton.setEnabled (true) ;
+        this.addButton.setEnabled (true) ;
+        this.jumlahItem.setEnabled (true) ;
+        this.itemsComboBox.setEnabled(true);
+        this.codeText.setText (this.setKode()) ;
     }//GEN-LAST:event_newButtonActionPerformed
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
