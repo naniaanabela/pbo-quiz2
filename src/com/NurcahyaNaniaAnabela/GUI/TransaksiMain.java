@@ -7,7 +7,6 @@ package com.NurcahyaNaniaAnabela.GUI;
 
 import java.text.SimpleDateFormat;
 import com.NurcahyaNaniaAnabela.Library.*;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.DefaultComboBoxModel;
